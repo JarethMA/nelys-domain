@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jjdbc:mysql://192.168.100.11:3306/nelys   # <-- cambia 'nelysdb' por el nombre de tu base
+    username: admin                              # <-- tu usuario
+    password: root                         # <-- tu contraseña
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate   # valida el esquema, pero NO crea ni modifica tablas
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
