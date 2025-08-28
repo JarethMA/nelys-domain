@@ -1,20 +1,19 @@
 package com.nelys.pizza.bussines.domain.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Entity
-@Table(name ="area")
+@Table(name = "price")
 @Data
 
-public class Area {
+public class Price {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Size(max = 50)
-    @Column(name = "name", length = 50)
-    private String name;
-
+    @Column(name = "price", precision = 6, scale = 2)
+    private BigDecimal price;
 }

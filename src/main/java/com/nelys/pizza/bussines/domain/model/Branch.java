@@ -5,16 +5,19 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Entity
-@Table(name ="area")
+@Table(name = "branch")
 @Data
 
-public class Area {
+public class Branch {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Size(max = 50)
-    @Column(name = "name", length = 50)
+    @Size(max = 100)
+    @Column(name = "name", length = 100)
     private String name;
 
+    @Size(max = 200)
+    @Column(name = "address", length = 200)
+    private String address;
 }
