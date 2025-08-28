@@ -4,10 +4,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name ="are")
+@Table(name ="area")
 @Data
 
-public class AreaModel {
+public class Area {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
